@@ -34,7 +34,7 @@ import {
     }      
   
     @Post()   
-    async createCompany({correo, nombreusuario, contrasena}: CreateUsuarioDto){
+    async createUsuario({correo, nombreusuario, contrasena}: CreateUsuarioDto){
       try {        
         return this.usuarioService.createUsuario({         
                 contrasena,
@@ -70,7 +70,7 @@ import {
     }      
   
     @Delete('/:id')    
-    async deleteCompany(@Param('id', ParseIntPipe) id: number) {
+    async deleteUsuario(@Param('id', ParseIntPipe) id: number) {
       try {        
         if (id) {
           return await this.usuarioService.deleteUsuario(id);

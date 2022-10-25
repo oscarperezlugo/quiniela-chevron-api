@@ -13,4 +13,4 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
   exports: [UsuarioService],
   controllers: [UsuarioController],
 })
-export class CompanyModule {}
+export class UsuarioModule {}
