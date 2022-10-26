@@ -9,10 +9,8 @@ export class AppController {
   getHello(): string {
     return this.appService.getHello();
   }
-  @Post('api/login')
-  login({correo, contrasena}) {
-    
-    return this.appService.login({correo, contrasena});
-  }
-
+  // @Post('api/login')
+  // login({ correo, contrasena }) {
+  //   return this.appService.login({ correo, contrasena });
+  // }
 }

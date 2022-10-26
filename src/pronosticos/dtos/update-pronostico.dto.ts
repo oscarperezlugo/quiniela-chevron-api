@@ -2,8 +2,7 @@ import { Exclude, Expose } from 'class-transformer';
 import { IsNotEmpty } from 'class-validator';
 
 @Exclude()
-export class UpdatePronosticoDto {  
-
+export class UpdatePronosticoDto {
   @Expose()
   @IsNotEmpty()
   golesvisita: number;
@@ -11,5 +10,4 @@ export class UpdatePronosticoDto {
   @Expose()
   @IsNotEmpty()
   goleslocal: number;
-  
 }

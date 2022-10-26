@@ -7,18 +7,18 @@ export class AppService {
   getHello(): string {
     return 'Hello World!';
   }
+
   async login({ correo, contrasena }) {
     const usuario = await this.prisma.usuario.findFirst({
       where: {
         correo,
-        contrasena
+        contrasena,
       },
-    });    
-    if(usuario){
-      return usuario
+    });
+    if (usuario) {
+      return usuario;
+    } else {
+      return 'correo o contrasena invalidos';
     }
-    else{
-      return 'correo o contrasena invalidos'
-    };
-} 
+  }
 }

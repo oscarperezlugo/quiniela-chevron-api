@@ -14,6 +14,4 @@ export class ReadUsuarioDto {
   @Expose()
   @IsNotEmpty()
   puntos: number;
-
-  
 }

@@ -2,8 +2,7 @@ import { Exclude, Expose } from 'class-transformer';
 import { IsNotEmpty } from 'class-validator';
 
 @Exclude()
-export class CreateUsuarioDto { 
-
+export class CreateUsuarioDto {
   @Expose()
   @IsNotEmpty()
   nombreusuario: string;
@@ -15,5 +14,4 @@ export class CreateUsuarioDto {
   @Expose()
   @IsNotEmpty()
   contrasena: string;
- 
 }

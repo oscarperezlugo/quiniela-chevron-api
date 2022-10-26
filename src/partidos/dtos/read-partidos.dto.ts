@@ -22,7 +22,4 @@ export class ReadPartidoDto {
   @Expose()
   @IsNotEmpty()
   fecha: Date;
-
-  
-  
 }

@@ -10,5 +10,4 @@ export class ReadEquipoDto {
   @Expose()
   @IsNotEmpty()
   imagen: string;
-  
 }

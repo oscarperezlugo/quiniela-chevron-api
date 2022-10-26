@@ -18,5 +18,4 @@ export class ReadPronosticoDto {
   @Expose()
   @IsNotEmpty()
   goleslocal: number;
-  
 }
