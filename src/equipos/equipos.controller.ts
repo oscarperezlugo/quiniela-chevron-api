@@ -1,22 +1,11 @@
 import {
     Controller,
     Get,
-    Param,
-    ParseIntPipe,
-    UseGuards,
     Post,
-    Body,
-    Put,
-    Delete,
-    Request,
-    Headers,
   } from '@nestjs/common';  
   import { EquiposService } from './equipos.service';
-  import { ReadEquipoDto } from './dtos/read-equipos.dto';    
-  import { create } from 'domain';
+  import { ReadEquipoDto } from './dtos/read-equipos.dto';
   import { error } from 'console';
-  
-
 
   @Controller('api/equipos')
   export class EquiposController {
@@ -35,13 +24,8 @@ import {
                 imagen
         });
       } catch {
-        return error;
         console.log(error);
+        return error;
       }
     }
-  
-  
-       
-  
-
   }

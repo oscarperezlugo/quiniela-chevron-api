@@ -1,8 +1,6 @@
-import { Body, Injectable, NotFoundException } from '@nestjs/common';
+import { Injectable, NotFoundException } from '@nestjs/common';
 import { usuario } from '@prisma/client';
 import { plainToClass } from 'class-transformer';
-import { Certificate } from 'crypto';
-import { read } from 'fs';
 import { PrismaService } from './../prisma/prisma.service';
 import {ReadUsuarioDto} from './dtos/readUsuario.dto'
 
@@ -22,8 +20,6 @@ interface Usuario {
     puntosu: number;
   }
   
-  
-
 @Injectable()
 export class UsuarioService{
     constructor(private prisma: PrismaService) {}
@@ -94,11 +90,5 @@ export class UsuarioService{
         if (!usuario) throw new NotFoundException(`Company doesn't exist`);
     
         return plainToClass(ReadUsuarioDto, usuario);
-    }
-    
-    
-    
-
-    
-      
+    } 
 }

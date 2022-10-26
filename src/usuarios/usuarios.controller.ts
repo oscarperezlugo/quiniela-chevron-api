@@ -3,22 +3,16 @@ import {
     Get,
     Param,
     ParseIntPipe,
-    UseGuards,
     Post,
     Body,
     Put,
     Delete,
-    Request,
-    Headers,
   } from '@nestjs/common';  
   import { UsuarioService } from './usuarios.service';
   import { ReadUsuarioDto } from './dtos/readUsuario.dto';  
   import { CreateUsuarioDto } from './dtos/createUsuario.dto';
-  import { create } from 'domain';
   import { error } from 'console';
   
-
-
   @Controller('api/usuario')
   export class UsuarioController {
     constructor(public usuarioService: UsuarioService) {}
@@ -43,8 +37,8 @@ import {
                 puntos: 0                 
         });
       } catch {
-        return error;
         console.log(error);
+        return error;
       }
     }
   

@@ -3,7 +3,6 @@ import { PrismaService } from 'src/prisma/prisma.service';
 import { EquiposController } from './equipos.controller';
 import { EquiposService } from './equipos.service';
 import { CacheModule } from '@nestjs/common';
-import { ConfigModule, ConfigService } from '@nestjs/config';
 
 @Module({
   imports: [

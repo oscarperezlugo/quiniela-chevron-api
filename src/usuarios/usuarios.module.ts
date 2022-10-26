@@ -3,7 +3,6 @@ import { PrismaService } from 'src/prisma/prisma.service';
 import { UsuarioController } from './usuarios.controller';
 import { UsuarioService } from './usuarios.service';
 import { CacheModule } from '@nestjs/common';
-import { ConfigModule, ConfigService } from '@nestjs/config';
 
 @Module({
   imports: [

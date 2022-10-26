@@ -1,8 +1,6 @@
-import { Body, Injectable, NotFoundException } from '@nestjs/common';
+import { Injectable, NotFoundException } from '@nestjs/common';
 import { pronosticos } from '@prisma/client';
 import { plainToClass } from 'class-transformer';
-import { Certificate } from 'crypto';
-import { read } from 'fs';
 import { PrismaService } from './../prisma/prisma.service';
 import { CreatePronosticoDto } from './dtos/create-pronostico.dto';
 
@@ -19,7 +17,6 @@ interface Pronostico {
   interface StatusUpdate {
     status: number;
   }
-
 
 @Injectable()
 export class PronosticoService{

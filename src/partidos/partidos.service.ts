@@ -1,8 +1,6 @@
-import { Body, Injectable, NotFoundException } from '@nestjs/common';
-import { partidos, pronosticos } from '@prisma/client';
+import { Injectable, NotFoundException } from '@nestjs/common';
+import { partidos } from '@prisma/client';
 import { plainToClass } from 'class-transformer';
-import { Certificate } from 'crypto';
-import { read } from 'fs';
 import { PrismaService } from './../prisma/prisma.service';
 import { ReadPartidoDto } from './dtos/read-partidos.dto';
 

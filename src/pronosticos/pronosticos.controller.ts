@@ -3,20 +3,13 @@ import {
     Get,
     Param,
     ParseIntPipe,
-    UseGuards,
     Post,
     Body,
-    Put,
-    Delete,
-    Request,
-    Headers,
+    Put
   } from '@nestjs/common';  
   import { PronosticoService } from './pronosticos.service';
-  import { CreatePronosticoDto } from './dtos/create-pronostico.dto';    
-  import { create } from 'domain';
+  import { CreatePronosticoDto } from './dtos/create-pronostico.dto';
   import { error } from 'console';
-  
-
 
   @Controller('api/pronosticos')
   export class PronosticoController {
@@ -42,8 +35,8 @@ import {
                 golesvisita                 
         });
       } catch {
-        return error;
         console.log(error);
+        return error;
       }
     }
   
@@ -80,6 +73,4 @@ import {
         return error;       
       }
     }     
-  
-
   }

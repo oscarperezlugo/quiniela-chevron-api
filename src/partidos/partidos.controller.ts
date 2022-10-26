@@ -2,22 +2,14 @@ import {
     Controller,
     Get,
     Param,
-    ParseIntPipe,
-    UseGuards,
     Post,
     Body,
-    Put,
-    Delete,
-    Request,
-    Headers,
+    Put
   } from '@nestjs/common';  
   import { PartidosService } from './partidos.service';
-  import { ReadPartidoDto } from './dtos/read-partidos.dto';    
-  import { create } from 'domain';
+  import { ReadPartidoDto } from './dtos/read-partidos.dto';
   import { error } from 'console';
   
-
-
   @Controller('api/partidos')
   export class PartidosController {
     constructor(public partidosService: PartidosService) {}
@@ -26,8 +18,6 @@ import {
     async getPartido(): Promise<ReadPartidoDto[]> {
       return this.partidosService.getPartidos();
     }
-  
-       
   
     @Post()   
     async createPartido({goleslocal, golesvisita, local, visita, fecha}: ReadPartidoDto){
@@ -40,8 +30,8 @@ import {
                 fecha                 
         });
       } catch {
-        return error;
         console.log(error);
+        return error;
       }
     }
   
@@ -77,6 +67,4 @@ import {
         return error;       
       }
     }     
-  
-
   }

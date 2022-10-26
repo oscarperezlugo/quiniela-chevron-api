@@ -3,7 +3,6 @@ import { PrismaService } from 'src/prisma/prisma.service';
 import { PartidosController } from './partidos.controller';
 import { PartidosService } from './partidos.service';
 import { CacheModule } from '@nestjs/common';
-import { ConfigModule, ConfigService } from '@nestjs/config';
 
 @Module({
   imports: [
